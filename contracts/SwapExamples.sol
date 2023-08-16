@@ -69,7 +69,7 @@ contract SwapExamples {
         amountIn = swapRouter.exactOutputSingle(params);
 
         if (amountIn < amountInMaximum) {
-            TransferHelper.safeApprove(DAI, address(swapRouter), 0);
+            TransferHelper.safeApprove(WETH9, address(swapRouter), 0);
             TransferHelper.safeTransfer(
                 WETH9,
                 msg.sender,
